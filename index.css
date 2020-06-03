@@ -1,0 +1,515 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0e102a; /*dark purple*/
+}
+
+/*========== HEADER ==========*/
+/* Style the main header navigation bar */
+header .top-nav {
+    overflow: hidden;
+    padding: 0% 6%;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 4;
+    background-color: #0e102a;
+}
+
+/* Style the links inside the navigation bar */
+.top-nav ul {
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Horizontal List*/
+.horizontal-list {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    padding: 0.2em .7em;
+}
+
+.horizontal-list li a {
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+#site-logo {
+    width: 100px;
+    height: 50px;
+    margin-right: 1.4rem;
+}
+
+.circular-image {
+    border-radius: 50%;
+}
+
+.top-nav ul li a:hover {
+    color: orange;
+}
+
+/* search box inside nav */
+.top-nav input[type=text] {
+    text-decoration: none;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    border-radius: 7px;
+    color: black;
+    outline: none;
+}
+
+/*========== Page Container ==========*/
+#page-container {
+    display: flex;
+    margin-top: 70px;
+}
+
+/*========== Albums ==========*/
+#main-page {
+    display: flex;
+    flex-wrap: wrap;
+    /*border: 2px solid red;*/
+    justify-content: space-between;
+    width: 62%;
+    margin-left: 6.5%;
+}
+
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+    /*border: 2px solid grey;*/
+    justify-content: space-between;
+    width: 100%;
+    height: 7%;
+}
+
+#albums div {
+    width: 33%;
+    height: 100%;
+    /*border: 2px solid cyan;*/
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#albums div:hover {
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+#albums div:not(:hover){
+    opacity: 0.6;
+
+}
+
+
+/*========== Latest Release ==========*/
+#latest-release {
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+#cards-container {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#cards-container .card {
+    /*border: 2px solid white;*/
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 2%;
+}
+
+#cards-container .card div {
+    /*border: 2px solid cyan;*/
+    display: inline-block;
+}
+
+#cards-container .card #div2 {
+    margin-top: 15px;
+}
+
+/*========== Poular Artist ==========*/
+#popular-artist {
+    width: 100%;
+    /*border: 2px solid red;*/
+}
+.artist {
+    margin-bottom: 2%;
+    /*border: 2px solid grey;*/
+}
+
+#artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: 2px solid green;*/
+}
+
+.artist-name {
+    margin: .5em;
+}
+
+/*========== Station ==========*/
+#stations {
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+#station-container {
+    /*border: 2px solid green;*/
+}
+
+.station {
+    /*border: 2px solid grey;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*========== Moods ==========*/
+#mood {
+    /*border: 2px solid red;*/
+    width: 100%;
+    padding: 2% 0px; 
+}
+
+#mood-container {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.moods {
+    /*border: 2px solid grey;*/
+}
+
+.banner {
+    width: 260px;
+    height: 170px;
+}
+
+/*========== English ==========*/
+#english-songs {
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+#box-container {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#hindi-songs {
+    /*border: 2px solid red;*/
+    width: 100%;
+}
+
+#hindi-songs h3 {
+    margin-top: 0px;
+}
+
+#punjabi-songs{
+    width: 100%;
+    margin-bottom: 15vh;
+}
+#punjabi-songs h3{
+    margin-top: 0px;
+}
+
+
+.box {
+    margin-bottom: 2%;
+}
+
+.box img {
+    width: 120px;
+    height: 120px;
+}
+
+/*========== Sidebar ==========*/
+#sidebar {
+    /*border: 2px solid red;*/
+    width: 25.5%;
+    padding: 0.5% 3%;
+    position: fixed;
+    right: 5rem;
+    height: 78vh;
+    overflow-y: auto;
+}
+
+.sidebar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.make-favourite {
+    margin-left: 140px !important;
+    padding-top: 15px !important;
+}
+
+
+/*========== Bottom Player ==========*/
+#music-player {
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    padding: 0px 6%;
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#song-info {
+    position: absolute;
+    padding-top: 15px;
+    margin-left: 4px;
+}
+
+#song-action {
+    position: absolute;
+    margin-left: 225px;
+    padding-top: 16px;
+}
+
+#now-playing  div{
+    display: inline-block;
+}
+
+#player-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#media-controls {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.media-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-actions {
+    display: flex;
+    width: 125px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.media-slider {
+    margin-top: 15px;
+    display: block;
+    height: 3px;
+    border-bottom-left-radius: 2px; 
+    border-top-left-radius: 2px; 
+    border-bottom-right-radius: 2px; 
+    border-top-right-radius: 2px; 
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    position: relative;
+}
+
+.timer {
+    height: 3px;
+    width: 35%;
+    background: linear-gradient(to right, rgba(211, 3, 32, 0.5), rgba(211, 3, 32, 0.85));
+}
+
+div.timer:after {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    top: -0.3rem;
+    left: 35%;
+    z-index: 3;
+    width: 0.875rem;
+    height: 0.875rem;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*========== COMMON ==========*/
+.margin-left-auto {
+    margin-left: auto;
+}
+
+#main-page section {
+    margin-top: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-color-grey {
+    color: grey;
+}
+
+.margin-top-4px {
+    margin-top: 4px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+
+/* When the screen is less than 600px wide, stack the links and the search field 
+vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .top-nav {
+        font-size: 10px;
+    }
+
+    .horizontal-list li {
+      display: inline-block;
+      padding: 5px;
+      margin-left: 0;
+    }
+
+    .top-nav ul li input[type=text] {
+        margin: 0;
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    #site-logo {
+        margin-right: 0px;
+    }
+
+    /*=====MAIN PAGE======*/
+    #main-page {
+        width: 50%;
+    }
+    #main-page section {
+        margin-top: 10px;
+    }
+        /*ALBUMS*/
+    #albums {
+        flex-direction: column;
+    }
+
+    #albums div {
+        width: 100%;
+        height: 150%;
+    }
+    /*====== Card ======*/
+    #cards-container {
+        width: 100%;
+    }
+    #cards-container .card {
+        width: 100%;
+        justify-content: space-around;
+        font-size: 12px;
+    }
+    #cards-container .card #div2{
+        padding-left: 3px;
+    }
+
+    /* Artists */
+    .artist {
+        margin-bottom: 2%;
+        width: 100%;
+    }
+
+    #station-banner {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 5%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 100px;
+    }
+
+    #box-container{
+        font-size: 12px;
+    }
+
+    .box img {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .top-nav {
+        font-size: 10px;
+    }
+
+    .horizontal-list li {
+      display: inline-block;
+      padding: 5px;
+      margin-left: 0;
+    }
+
+    .top-nav ul li input[type=text] {
+        margin: 0;
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    #site-logo {
+        margin-right: 0px;
+    }
+
+    #main-page {
+        width: 50%;
+    }
+    #main-page section {
+        margin-top: 10px;
+    }
+
+    #albums {
+        flex-direction: column;
+    }
+
+    #albums div {
+        width: 100%;
+        height: 100%;
+    }
+    #cards-container {
+        width: 100%;
+    }
+    #cards-container .card {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
